@@ -883,10 +883,10 @@ else(OPTION_USE_XRENDER)
 endif (OPTION_USE_XRENDER)
 
 #######################################################################
-set (FL_NO_PRINT_SUPPORT FALSE)
-if (X11_FOUND AND NOT OPTION_PRINT_SUPPORT)
-  set (FL_NO_PRINT_SUPPORT TRUE)
-endif (X11_FOUND AND NOT OPTION_PRINT_SUPPORT)
+set (FL_NO_PRINT_SUPPORT TRUE)
+if (OPTION_PRINT_SUPPORT)
+  set (FL_NO_PRINT_SUPPORT FALSE)
+endif (OPTION_PRINT_SUPPORT)
 #######################################################################
 
 #######################################################################

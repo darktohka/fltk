@@ -192,7 +192,7 @@ list (APPEND HEADER_FILES
 
 set (GL_HEADER_FILES)  # FIXME: not (yet?) defined
 
-if (FLTK_USE_X11 AND NOT OPTION_PRINT_SUPPORT)
+if (NOT OPTION_PRINT_SUPPORT)
   set (PSFILES
   )
 else ()
@@ -200,7 +200,7 @@ else ()
     drivers/PostScript/Fl_PostScript.cxx
     drivers/PostScript/Fl_PostScript_image.cxx
   )
-endif (FLTK_USE_X11 AND NOT OPTION_PRINT_SUPPORT)
+endif (NOT OPTION_PRINT_SUPPORT)
 
 set (DRIVER_FILES)
 
